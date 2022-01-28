@@ -1,0 +1,1 @@
+This package provides .eslintrc as an extensible shared config

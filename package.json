@@ -1,0 +1,13 @@
+{
+  "name": "eslint-config-windward",
+  "version": "0.1.7",
+  "description": "JS ESLint config",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "https://github.com/kage-sakura/eslint-config-windward",
+  "keywords": [ "eslint", "eslintconfig", "config", "javascript" ],
+  "author": "kage-sakura",
+  "license": "MIT"
+}
