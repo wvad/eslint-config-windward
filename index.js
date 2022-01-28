@@ -49,7 +49,6 @@ module.exports = {
     "consistent-return": "error",
     "no-constructor-return": "error",
     "no-unused-private-class-members": "error",
-    "camelcase": [ "error", { ignoreDestructuring: true, ignoreImports: true } ],
     "require-await": "error",
     "symbol-description": "error",
     "grouped-accessor-pairs": "error",
