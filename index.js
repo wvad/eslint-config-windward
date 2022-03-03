@@ -59,9 +59,6 @@ module.exports = {
       selector: "CallExpression[callee.name='Array']",
       message: "Constructor 'Array' requires 'new'"
     }, {
-      selector: "CallExpression[callee.name='Object']",
-      message: "Constructor 'Object' requires 'new'"
-    }, {
       selector: "CallExpression[callee.name='Function']",
       message: "Constructor 'Function' requires 'new'"
     }, {

@@ -110,14 +110,11 @@ module.exports = {
     "no-unneeded-ternary": "error",
     "default-case-last": "error",
 
-    // 'Array', 'Object', 'Function', and 'RegExp' are constructors.
+    // 'Array', 'Function', and 'RegExp' are constructors.
     // So those should be call with 'new'.
     "no-restricted-syntax": [ "error", {
       selector: "CallExpression[callee.name='Array']",
       message: "Constructor 'Array' requires 'new'"
-    }, {
-      selector: "CallExpression[callee.name='Object']",
-      message: "Constructor 'Object' requires 'new'"
     }, {
       selector: "CallExpression[callee.name='Function']",
       message: "Constructor 'Function' requires 'new'"
