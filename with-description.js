@@ -13,6 +13,7 @@ module.exports = {
     // These are suggestions.
     "prefer-const": "warn",
     "object-shorthand": "warn",
+    "prefer-destructuring": "warn",
     "prefer-arrow-callback": "warn",
 
     // If it's against these rules, perhaps it's mistake.
@@ -48,9 +49,6 @@ module.exports = {
 
     // Self comparing is unnecessary.
     "no-self-compare": "error",
-
-    // Use LF.
-    "linebreak-style": "error",
 
     // ...
     "no-array-constructor": "error",
@@ -99,11 +97,8 @@ module.exports = {
     "no-caller": "error",
 
     // These are format rules.
-    "no-useless-computed-key": "error",
     "no-useless-constructor": "error",
     "no-useless-return": "error",
-    "grouped-accessor-pairs": "error",
-    "prefer-destructuring": "error",
     "no-lone-blocks": "error",
     "operator-assignment": "error",
     "prefer-exponentiation-operator": "error",
