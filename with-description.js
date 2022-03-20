@@ -102,7 +102,6 @@ module.exports = {
     "no-useless-return": "error",
     "grouped-accessor-pairs": "error",
     "no-lone-blocks": "error",
-    "dot-notation": "error",
     "operator-assignment": "error",
     "prefer-exponentiation-operator": "error",
     "no-unneeded-ternary": "error",
