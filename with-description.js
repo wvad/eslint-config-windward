@@ -97,13 +97,17 @@ module.exports = {
     "no-caller": "error",
 
     // These are format rules.
+    "no-useless-computed-key": "error",
     "no-useless-constructor": "error",
     "no-useless-return": "error",
+    "grouped-accessor-pairs": "error",
     "no-lone-blocks": "error",
+    "dot-notation": "error",
     "operator-assignment": "error",
     "prefer-exponentiation-operator": "error",
     "no-unneeded-ternary": "error",
     "default-case-last": "error",
+    "camelcase": [ "error", { ignoreDestructuring: true, ignoreImports: true } ],
 
     // 'Array', 'Function', and 'RegExp' are constructors.
     // So those should be call with 'new'.

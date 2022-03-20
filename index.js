@@ -45,13 +45,17 @@ module.exports = {
     "no-proto": "error",
     "no-iterator": "error",
     "no-caller": "error",
+    "no-useless-computed-key": "error",
     "no-useless-constructor": "error",
     "no-useless-return": "error",
+    "grouped-accessor-pairs": "error",
     "no-lone-blocks": "error",
+    "dot-notation": "error",
     "operator-assignment": "error",
     "prefer-exponentiation-operator": "error",
     "no-unneeded-ternary": "error",
     "default-case-last": "error",
+    "camelcase": [ "error", { ignoreDestructuring: true, ignoreImports: true } ],
     "no-restricted-syntax": [ "error", {
       selector: "CallExpression[callee.name='Array']",
       message: "Constructor 'Array' requires 'new'"
