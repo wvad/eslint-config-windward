@@ -51,18 +51,13 @@ module.exports = {
     // Self comparing is unnecessary.
     "no-self-compare": "error",
 
-    // Use of the Array constructor to construct a new array is discouraged in favor of array literal notation.
-    // It's because the single-argument pitfall and because the Array global may be redefined.
-    // The exception is when the Array constructor is used to intentionally create sparse arrays of a specified size by giving the constructor a single numeric argument.
-    "no-array-constructor": "error",
-
     // Boxed primitives should not be used.
     "no-new-wrappers": "error",
 
     // 'return' should not be used in a constructor.
     "no-constructor-return": "error",
 
-    // Dead code
+    // Unused private members are unnecessary.
     "no-unused-private-class-members": "error",
 
     // If we omit symbol's description, we won't know what the Symbol is for.
@@ -99,6 +94,11 @@ module.exports = {
     // Object.prorototype.hasOwnProperty.call is too long!
     // Object.hasOwn is good.
     "prefer-object-has-own": "error",
+
+    // Use of the Array constructor to construct a new array is discouraged in favor of array literal notation.
+    // It's because the single-argument pitfall and because the Array global may be redefined.
+    // The exception is when the Array constructor is used to create sparse arrays of a specified size by giving a single numeric argument.
+    "no-array-constructor": "error",
 
     // These are deprecated.
     "no-proto": "error",
