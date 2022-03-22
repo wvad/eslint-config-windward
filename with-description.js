@@ -39,7 +39,7 @@ module.exports = {
     // Unstrict equelity is bad.
     "eqeqeq": [ "error", "smart" ],
 
-    // ...
+    // Disallow labels that share a name with a variable.
     "no-label-var": "error",
 
     // We should import modules only once.
@@ -51,7 +51,9 @@ module.exports = {
     // Self comparing is unnecessary.
     "no-self-compare": "error",
 
-    // ...
+    // Use of the Array constructor to construct a new array is discouraged in favor of array literal notation.
+    // It's because the single-argument pitfall and because the Array global may be redefined.
+    // The exception is when the Array constructor is used to intentionally create sparse arrays of a specified size by giving the constructor a single numeric argument.
     "no-array-constructor": "error",
 
     // Boxed primitives should not be used.
@@ -116,9 +118,9 @@ module.exports = {
     "camelcase": [ "error", { ignoreDestructuring: true, ignoreImports: true } ],
 
     // 'Array', 'Function' and 'RegExp' are constructors.
-    // So those should be call with 'new'.
+    // So those have to be call with 'new'.
     // BigInt is not a constructor.
-    // So it should be called without 'new'.
+    // So it have to be called without 'new'.
     "no-restricted-syntax": [ "error", {
       selector: "CallExpression[callee.name='Array']",
       message: "Constructor 'Array' requires 'new'"
