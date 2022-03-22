@@ -115,8 +115,10 @@ module.exports = {
     "default-case-last": "error",
     "camelcase": [ "error", { ignoreDestructuring: true, ignoreImports: true } ],
 
-    // 'Array', 'Function', and 'RegExp' are constructors.
+    // 'Array', 'Function' and 'RegExp' are constructors.
     // So those should be call with 'new'.
+    // BigInt is not a constructor.
+    // So it should be called without 'new'.
     "no-restricted-syntax": [ "error", {
       selector: "CallExpression[callee.name='Array']",
       message: "Constructor 'Array' requires 'new'"
