@@ -126,6 +126,9 @@ module.exports = {
     }, {
       selector: "CallExpression[callee.name='RegExp']",
       message: "Constructor 'RegExp' requires 'new'"
+    }, {
+      selector: "NewExpression[callee.name='BigInt']",
+      message: "BigInt is not a constructor"
     }],
 
     // These should not be shadowed.
