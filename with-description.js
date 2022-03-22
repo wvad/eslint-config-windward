@@ -29,6 +29,7 @@ module.exports = {
     "no-template-curly-in-string": "warn",
     "no-shadow": "warn",
     "new-cap": "warn",
+    "prefer-promise-reject-errors": "warn",
     "no-use-before-define": [ "warn", "nofunc" ],
 
 
@@ -82,6 +83,12 @@ module.exports = {
 
     // The parameter 'radix' have to be specified explicitly.
     "radix": "error",
+
+    // We should use template literals instead of string concatenation.
+    "prefer-template": "error",
+
+    // Trailing spaces are not allowed.
+    "no-trailing-spaces": "error",
 
     // It is unnecessary to initialize variables with undefined.
     // Veriables' default value is undefined.
