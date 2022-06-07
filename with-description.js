@@ -12,31 +12,30 @@ module.exports = {
 
     // These are suggestions.
     "prefer-const": "warn",
+    "prefer-template": "warn",
     "object-shorthand": "warn",
     "prefer-destructuring": "warn",
     "prefer-arrow-callback": "warn",
+    "no-useless-constructor": "warn",
 
-    // If it's against these rules, perhaps it's mistake.
+    // These are warnings.
     "new-cap": "warn",
     "no-shadow": "warn",
     "no-cond-assign": "warn",
     "no-fallthrough": "warn",
-    "no-lone-blocks": "warn",
     "no-useless-call": "warn",
     "no-return-assign": "warn",
     "consistent-return": "warn",
-    "default-case-last": "warn",
     "no-unreachable-loop": "warn",
     "no-unused-expressions": "warn",
     "class-methods-use-this": "warn",
-    "no-useless-constructor": "warn",
     "no-template-curly-in-string": "warn",
     "no-unmodified-loop-condition": "warn",
     "prefer-promise-reject-errors": "warn",
     "no-use-before-define": [ "warn", "nofunc" ],
 
 
-    // The parameter 'radix' have to be specified explicitly.
+    // The parameter 'radix' has to be specified explicitly.
     "radix": "error",
 
     // We should use strict mode.
@@ -54,17 +53,20 @@ module.exports = {
     // If there is the 'return' in the IfStatement, the ElseStatement is unnecessary.
     "no-else-return": "error",
 
+    // Standalone code blocks have no use.
+    "no-lone-blocks": "error",
+
     // Self comparing is unnecessary.
     "no-self-compare": "error",
 
     // Boxed primitives should not be used.
     "no-new-wrappers": "error",
 
-    // We should use template literals instead of string concatenation.
-    "prefer-template": "error",
-
     // Thrown values have to be an object.
     "no-throw-literal": "error",
+
+    // 'default:' should be the last clause.
+    "default-case-last": "error",
 
     // If we omit symbol's description, we won't know what the Symbol is for.
     "symbol-description": "error",
@@ -72,7 +74,7 @@ module.exports = {
     // Trailing spaces are not allowed.
     "no-trailing-spaces": "error",
 
-    // Unstrict equelity is bad.
+    // We must not use abstract equelity operators.
     "eqeqeq": [ "error", "smart" ],
 
     // We should import modules only once.
@@ -84,7 +86,7 @@ module.exports = {
     // 'return' should not be used in a constructor.
     "no-constructor-return": "error",
 
-    // Use regex leterals instead of RegExp constructor.
+    // Use regex leteral instead of RegExp constructor.
     "prefer-regex-literals": "error",
 
     // If we forget to write 'return' in a callback of those, it's probably a mistake.
@@ -117,13 +119,17 @@ module.exports = {
     "no-useless-computed-key": "error",
     "prefer-exponentiation-operator": "error",
 
-    // BigInt is not a constructor.
-    // So it have to be called without 'new'.
-    // Array, Function and RegExp are constructors.
+    // BigInt and Object are not constructors.
+    // So those have to be called without 'new'.
+    // Array, Function, RegExp, Error, AggregateError, EvalError, RangeError,
+    // ReferenceError, SyntaxError, TypeError and URIError are constructors.
     // So those have to be call with 'new'.
     "no-restricted-syntax": [ "error", {
       selector: "NewExpression[callee.name='BigInt']",
       message: "BigInt is not a constructor"
+    }, {
+      selector: "NewExpression[callee.name='Object']",
+      message: "Object is not a constructor"
     }, {
       selector: "CallExpression[callee.name='Array']",
       message: "Constructor 'Array' requires 'new'"
