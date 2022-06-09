@@ -14,7 +14,7 @@ module.exports = exports = {
     "class-methods-use-this": "warn",
     "no-template-curly-in-string": "warn",
     "no-unmodified-loop-condition": "warn",
-    "no-use-before-define": [ "warn", "nofunc" ],
+    "no-use-before-define": ["warn", "nofunc"],
     "radix": "error",
     "strict": "error",
     "no-var": "error",
@@ -27,7 +27,7 @@ module.exports = exports = {
     "no-throw-literal": "error",
     "symbol-description": "error",
     "no-trailing-spaces": "error",
-    "eqeqeq": "error",
+    "eqeqeq": ["error", "smart"],
     "no-duplicate-imports": "error",
     "no-array-constructor": "error",
     "no-constructor-return": "error",
@@ -54,14 +54,26 @@ module.exports = exports = {
       selector: "NewExpression[callee.name='BigInt']",
       message: "BigInt is not a constructor"
     }, {
-      selector: "CallExpression[callee.name='Array']",
-      message: "Constructor 'Array' requires 'new'"
+      selector: "CallExpression:matches([callee.name='Array'],[callee.name='RegExp'],[callee.name='Function'],[callee.name='Error'],[callee.name='AggregateError'],[callee.name='EvalError'],[callee.name='RangeError'],[callee.name='ReferenceError'],[callee.name='SyntaxError'],[callee.name='TypeError'],[callee.name='URIError'])",
+      message: "Class constructors require 'new'"
     }, {
-      selector: "CallExpression[callee.name='RegExp']",
-      message: "Constructor 'RegExp' requires 'new'"
+      selector: "ClassExpression:matches([superClass.name='Number'],[superClass.name='String'],[superClass.name='Boolean'],[superClass.name='Function'])",
+      message: "A class cannot extend the sealed class"
     }, {
-      selector: "CallExpression[callee.name='Function']",
-      message: "Constructor 'Function' requires 'new'"
+      selector: "ClassDeclaration:matches([superClass.name='Number'],[superClass.name='String'],[superClass.name='Boolean'],[superClass.name='Function'])",
+      message: "A class cannot extend the sealed class"
+    }, {
+      selector: "ClassExpression[superClass.name='Array'] MethodDefinition[kind='constructor'] CallExpression[callee.type='Super'][arguments.length>1]",
+      message: "Too many arguments for Array constructor"
+    }, {
+      selector: "ClassDeclaration[superClass.name='Array'] MethodDefinition[kind='constructor'] CallExpression[callee.type='Super'][arguments.length>1]",
+      message: "Too many arguments for Array constructor"
+    }, {
+      selector: "ClassExpression[superClass.name='Array'][body.body.length<1]",
+      message: "The class extending Array requires user-defined constructor"
+    }, {
+      selector: "ClassDeclaration[superClass.name='Array'][body.body.length<1]",
+      message: "The class extending Array requires user-defined constructor"
     }],
     "constructor-super": "error",
     "for-direction": "warn",
@@ -111,7 +123,7 @@ module.exports = exports = {
     "consistent-this": "warn",
     "default-case-last": "warn",
     "default-param-last": "error",
-    "dot-notation": "error",
+    "dot-notation": ["warn", { allowKeywords: false }],
     "guard-for-in": "error",
     "max-nested-callbacks": ["error", { max: 5 }],
     "no-alert": "error",
