@@ -123,7 +123,6 @@ module.exports = exports = {
     "consistent-this": "warn",
     "default-case-last": "warn",
     "default-param-last": "error",
-    "dot-notation": ["warn", { allowKeywords: false }],
     "guard-for-in": "error",
     "max-nested-callbacks": ["error", { max: 5 }],
     "no-alert": "error",
