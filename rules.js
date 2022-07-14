@@ -82,7 +82,6 @@ module.exports = exports = {
     "no-class-assign": "error",
     "no-compare-neg-zero": "error",
     "no-const-assign": "error",
-    "no-constant-binary-expression": "error",
     "no-constant-condition": "error",
     "no-debugger": "error",
     "no-dupe-args": "error",
