@@ -39,6 +39,7 @@ module.exports = exports = {
     "no-caller": "error",
     "no-iterator": "error",
     "camelcase": ["error", {
+      properties: "never",
       ignoreGlobals: true,
       ignoreImports: true,
       ignoreDestructuring: true
@@ -57,10 +58,10 @@ module.exports = exports = {
       selector: "CallExpression:matches([callee.name='Array'],[callee.name='RegExp'],[callee.name='Function'],[callee.name='Error'],[callee.name='AggregateError'],[callee.name='EvalError'],[callee.name='RangeError'],[callee.name='ReferenceError'],[callee.name='SyntaxError'],[callee.name='TypeError'],[callee.name='URIError'])",
       message: "Class constructors require 'new'"
     }, {
-      selector: "ClassExpression:matches([superClass.name='Number'],[superClass.name='String'],[superClass.name='Boolean'],[superClass.name='Function'])",
+      selector: "ClassExpression:matches([superClass.name='Number'],[superClass.name='String'],[superClass.name='Boolean'],[superClass.name='Object'],[superClass.name='Function'])",
       message: "A class cannot extend the sealed class"
     }, {
-      selector: "ClassDeclaration:matches([superClass.name='Number'],[superClass.name='String'],[superClass.name='Boolean'],[superClass.name='Function'])",
+      selector: "ClassDeclaration:matches([superClass.name='Number'],[superClass.name='String'],[superClass.name='Boolean'],[superClass.name='Object'],[superClass.name='Function'])",
       message: "A class cannot extend the sealed class"
     }, {
       selector: "ClassExpression[superClass.name='Array'] MethodDefinition[kind='constructor'] CallExpression[callee.type='Super'][arguments.length>1]",
