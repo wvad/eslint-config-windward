@@ -1,20 +1,20 @@
 module.exports = exports = {
   rules: {
     "no-await-in-loop": "warn",
-    "prefer-template": "warn",
-    "no-useless-constructor": "warn",
+    "prefer-template": "warn", // [TODO] custom
+    "no-useless-constructor": "warn", // [TODO] custom
     "new-cap": "warn",
     "no-shadow": "warn",
-    "no-cond-assign": "warn",
+    "no-cond-assign": "warn", // [CHANGE] :error
     "no-fallthrough": "warn",
-    "no-return-assign": "warn",
+    "no-return-assign": "warn", // [CHANGE] :error
     "consistent-return": "warn",
     "no-unreachable-loop": "warn",
-    "no-unused-expressions": "warn",
+    "no-unused-expressions": "warn", // [TODO] custom
     "class-methods-use-this": "warn",
     "no-template-curly-in-string": "warn",
     "no-unmodified-loop-condition": "warn",
-    "no-use-before-define": ["warn", "nofunc"],
+    "no-use-before-define": ["warn", "nofunc"], // [TODO] custom
     "radix": "error",
     "strict": "error",
     "no-var": "error",
