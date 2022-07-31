@@ -19,12 +19,12 @@ module.exports = exports = {
     "no-ex-assign": "warn",
     "no-promise-executor-return": "warn",
     "no-setter-return": "warn",
-    "no-unsafe-negation": "warn",
-    "no-unsafe-optional-chaining": "warn",
+    "no-unsafe-negation": "warn", // [CHANGE] :error
+    "no-unsafe-optional-chaining": "warn", // [CHANGE] :error
     "require-atomic-updates": "warn",
     "consistent-this": "warn",
-    "default-case-last": "warn",
-    "no-confusing-arrow": "warn",
+    "default-case-last": "warn", // [CHANGE] :error
+    "no-confusing-arrow": "warn", // [CHANGE] :error
     "no-loop-func": "warn",
     "no-param-reassign": "warn",
     "radix": "error",
